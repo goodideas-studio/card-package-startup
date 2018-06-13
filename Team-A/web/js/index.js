@@ -43,8 +43,6 @@ window.onload = function () {
   let rollBtn = document.querySelector('.roll-btn')
   let testBtn = document.querySelector('.test-btn')
   rollBtn.addEventListener('click', e => {
-    console.log()
-
     if (balance - cost < 0) {
       alert('餘額不足請盡快儲值！！')
       return
@@ -65,10 +63,13 @@ window.onload = function () {
       balance -= cost
       theBalance.innerHTML = balance
       monster = rollList[rollList.length - 1]
-      console.log(rollList, monster)
       javaScriptCallToSwift.updateMoney(balance)
       javaScriptCallToSwift.getCardInfo(monster.src, monster.type)
     }
+  })
+  testBtn.addEventListener('click', function () {
+    javaScriptCallToSwift.updateMoney(123)
+    javaScriptCallToSwift.getCardInfo('haha', 1)
   })
 }
 
