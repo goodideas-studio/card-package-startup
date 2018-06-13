@@ -10,6 +10,7 @@ import UIKit
 
 class RecordViewController: UIViewController {
     
+    let charactorArray = ["6","10","20","24","27","42","46","56","69","90"]
     var playRecords = [[String:String]]()
     
     func createImages(name: String) -> [UIImage] {
@@ -37,25 +38,45 @@ class RecordViewController: UIViewController {
 extension RecordViewController:UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 10
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CardRecordCell
-        
         let redAnimation = createImages(name: "card_aura_red_128x128_")
         let blueAnimation = createImages(name: "card_aura_blue_128x128_")
         let greenAnimation = createImages(name: "card_aura_green_128x128_")
         let grayAnimation = createImages(name: "card_aura_gray_128x128_")
         
+        let firstRecord = [["charactor":"\(charactorArray[0])","background":"cardBackground05"],
+                           ["charactor":"6","\(charactorArray[1])":"cardBackground05"],
+                           ["charactor":"6","\(charactorArray[2])":"cardBackground04"],
+                           ["charactor":"6","\(charactorArray[3])":"cardBackground03"],
+                           ["charactor":"6","\(charactorArray[4])":"cardBackground02"],
+                           ["charactor":"6","\(charactorArray[5])":"cardBackground01"]]
+        playRecords.append(firstRecord)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CardRecordCell
+        
+        cell.recordLabel.text = "第 \(indexPath.item) 抽"
         switch indexPath.item {
         case 0:
             cell.animationView.image = UIImage.animatedImage(with: redAnimation, duration: 2)
+            cell.colorView.image = UIImage(named: "cardBackground05")
         case 1:
             cell.animationView.image = UIImage.animatedImage(with: blueAnimation, duration: 2)
+            cell.colorView.image = UIImage(named: "cardBackground04")
         case 2:
             cell.animationView.image = UIImage.animatedImage(with: greenAnimation, duration: 2)
+            cell.colorView.image = UIImage(named: "cardBackground03")
         case 3:
             cell.animationView.image = UIImage.animatedImage(with: grayAnimation, duration: 2)
+            cell.colorView.image = UIImage(named: "cardBackground02")
+        case 4:
+            cell.animationView.image = UIImage.animatedImage(with: grayAnimation, duration: 2)
+            cell.colorView.image = UIImage(named: "cardBackground01")
+            
+        case 5:
+            cell.cardView.image = UIImage(named: playRecords[0]["charactor"]!)
+            cell.colorView.image = UIImage(named: playRecords[0]["background"]!)
+            cell.animationView.image = UIImage.animatedImage(with: redAnimation, duration: 2)
         default:
             break
         }

@@ -15,6 +15,7 @@
 		A5DE190A20D0BE7B000DFDD9 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE190920D0BE7B000DFDD9 /* RecordViewController.swift */; };
 		A5DE190C20D0C1D3000DFDD9 /* CardRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE190B20D0C1D3000DFDD9 /* CardRecordCell.swift */; };
 		A5DE191020D0CE95000DFDD9 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE190F20D0CE95000DFDD9 /* UserDefaults+Extension.swift */; };
+		A5DE191320D0D89C000DFDD9 /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DE191120D0D89C000DFDD9 /* Card.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A5DE190920D0BE7B000DFDD9 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		A5DE190B20D0C1D3000DFDD9 /* CardRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRecordCell.swift; sourceTree = "<group>"; };
 		A5DE190F20D0CE95000DFDD9 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		A5DE191220D0D89C000DFDD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CardGameWithWeb/Base.lproj/Card.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		A5DE18EB20D0BD10000DFDD9 = {
 			isa = PBXGroup;
 			children = (
+				A5DE191120D0D89C000DFDD9 /* Card.storyboard */,
 				A5DE18F620D0BD10000DFDD9 /* CardGameWithWeb */,
 				A5DE18F520D0BD10000DFDD9 /* Products */,
 			);
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5DE191320D0D89C000DFDD9 /* Card.storyboard in Resources */,
 				A5DE190220D0BD12000DFDD9 /* LaunchScreen.storyboard in Resources */,
 				A5DE18FF20D0BD12000DFDD9 /* Assets.xcassets in Resources */,
 				A5DE18FD20D0BD10000DFDD9 /* Main.storyboard in Resources */,
@@ -169,6 +173,14 @@
 				A5DE190120D0BD12000DFDD9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A5DE191120D0D89C000DFDD9 /* Card.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5DE191220D0D89C000DFDD9 /* Base */,
+			);
+			name = Card.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

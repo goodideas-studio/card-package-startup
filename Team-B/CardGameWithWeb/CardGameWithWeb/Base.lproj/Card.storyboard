@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lqi-c6-J1K">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--抽卡-->
+        <scene sceneID="ggS-tb-SwN">
+            <objects>
+                <viewController id="Lqi-c6-J1K" customClass="CardViewController" customModule="CardGameWithWeb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OXe-SO-DV8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e01-0W-XnN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="31z-Sr-eIP"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e01-0W-XnN" firstAttribute="top" secondItem="NtH-Ko-715" secondAttribute="top" id="0f6-Ov-PpA"/>
+                            <constraint firstItem="e01-0W-XnN" firstAttribute="trailing" secondItem="NtH-Ko-715" secondAttribute="trailing" id="6BT-MQ-0DG"/>
+                            <constraint firstItem="e01-0W-XnN" firstAttribute="leading" secondItem="NtH-Ko-715" secondAttribute="leading" id="hFg-ud-kUZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NtH-Ko-715"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="抽卡" id="Maa-Nl-mnZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HL8-HK-WHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="-189"/>
+        </scene>
+    </scenes>
+</document>
