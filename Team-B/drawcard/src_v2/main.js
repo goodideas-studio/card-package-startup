@@ -113,6 +113,8 @@ function randomDraw() {
 
 }
 
+javaScriptCallToSwift.saveData(a,b,c)
+
 function saveData( ) {
   console.log(a,b,c)
   return[ a, b ,c]
