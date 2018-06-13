@@ -15,6 +15,14 @@
 		A5DE190A20D0BE7B000DFDD9 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE190920D0BE7B000DFDD9 /* RecordViewController.swift */; };
 		A5DE190C20D0C1D3000DFDD9 /* CardRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE190B20D0C1D3000DFDD9 /* CardRecordCell.swift */; };
 		A5DE191020D0CE95000DFDD9 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE190F20D0CE95000DFDD9 /* UserDefaults+Extension.swift */; };
+		A5DE191320D0D89C000DFDD9 /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DE191120D0D89C000DFDD9 /* Card.storyboard */; };
+		F7A3C4AA20D10EE1004C4E4F /* src_v2 in Resources */ = {isa = PBXBuildFile; fileRef = F7A3C4A320D10EE0004C4E4F /* src_v2 */; };
+		F7A3C4AB20D10EE1004C4E4F /* index_v3.html in Resources */ = {isa = PBXBuildFile; fileRef = F7A3C4A420D10EE0004C4E4F /* index_v3.html */; };
+		F7A3C4AC20D10EE1004C4E4F /* img2 in Resources */ = {isa = PBXBuildFile; fileRef = F7A3C4A520D10EE1004C4E4F /* img2 */; };
+		F7A3C4AD20D10EE1004C4E4F /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = F7A3C4A620D10EE1004C4E4F /* index.html */; };
+		F7A3C4AE20D10EE1004C4E4F /* src_v3 in Resources */ = {isa = PBXBuildFile; fileRef = F7A3C4A720D10EE1004C4E4F /* src_v3 */; };
+		F7A3C4AF20D10EE1004C4E4F /* img in Resources */ = {isa = PBXBuildFile; fileRef = F7A3C4A820D10EE1004C4E4F /* img */; };
+		F7A3C4B020D10EE1004C4E4F /* index_v2.html in Resources */ = {isa = PBXBuildFile; fileRef = F7A3C4A920D10EE1004C4E4F /* index_v2.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		A5DE190920D0BE7B000DFDD9 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		A5DE190B20D0C1D3000DFDD9 /* CardRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRecordCell.swift; sourceTree = "<group>"; };
 		A5DE190F20D0CE95000DFDD9 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		A5DE191220D0D89C000DFDD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CardGameWithWeb/Base.lproj/Card.storyboard; sourceTree = "<group>"; };
+		F7A3C4A320D10EE0004C4E4F /* src_v2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = src_v2; path = ../../drawCardWeb/src_v2; sourceTree = "<group>"; };
+		F7A3C4A420D10EE0004C4E4F /* index_v3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index_v3.html; path = ../../drawCardWeb/index_v3.html; sourceTree = "<group>"; };
+		F7A3C4A520D10EE1004C4E4F /* img2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = img2; path = ../../drawCardWeb/img2; sourceTree = "<group>"; };
+		F7A3C4A620D10EE1004C4E4F /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../../drawCardWeb/index.html; sourceTree = "<group>"; };
+		F7A3C4A720D10EE1004C4E4F /* src_v3 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = src_v3; path = ../../drawCardWeb/src_v3; sourceTree = "<group>"; };
+		F7A3C4A820D10EE1004C4E4F /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; name = img; path = ../../drawCardWeb/img; sourceTree = "<group>"; };
+		F7A3C4A920D10EE1004C4E4F /* index_v2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index_v2.html; path = ../../drawCardWeb/index_v2.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +60,7 @@
 		A5DE18EB20D0BD10000DFDD9 = {
 			isa = PBXGroup;
 			children = (
+				A5DE191120D0D89C000DFDD9 /* Card.storyboard */,
 				A5DE18F620D0BD10000DFDD9 /* CardGameWithWeb */,
 				A5DE18F520D0BD10000DFDD9 /* Products */,
 			);
@@ -69,6 +86,13 @@
 				A5DE18FE20D0BD12000DFDD9 /* Assets.xcassets */,
 				A5DE190020D0BD12000DFDD9 /* LaunchScreen.storyboard */,
 				A5DE190320D0BD12000DFDD9 /* Info.plist */,
+				F7A3C4A820D10EE1004C4E4F /* img */,
+				F7A3C4A520D10EE1004C4E4F /* img2 */,
+				F7A3C4A920D10EE1004C4E4F /* index_v2.html */,
+				F7A3C4A420D10EE0004C4E4F /* index_v3.html */,
+				F7A3C4A620D10EE1004C4E4F /* index.html */,
+				F7A3C4A320D10EE0004C4E4F /* src_v2 */,
+				F7A3C4A720D10EE1004C4E4F /* src_v3 */,
 			);
 			path = CardGameWithWeb;
 			sourceTree = "<group>";
@@ -131,8 +155,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7A3C4AF20D10EE1004C4E4F /* img in Resources */,
+				F7A3C4AB20D10EE1004C4E4F /* index_v3.html in Resources */,
+				F7A3C4AA20D10EE1004C4E4F /* src_v2 in Resources */,
+				A5DE191320D0D89C000DFDD9 /* Card.storyboard in Resources */,
 				A5DE190220D0BD12000DFDD9 /* LaunchScreen.storyboard in Resources */,
+				F7A3C4AC20D10EE1004C4E4F /* img2 in Resources */,
+				F7A3C4AD20D10EE1004C4E4F /* index.html in Resources */,
+				F7A3C4AE20D10EE1004C4E4F /* src_v3 in Resources */,
 				A5DE18FF20D0BD12000DFDD9 /* Assets.xcassets in Resources */,
+				F7A3C4B020D10EE1004C4E4F /* index_v2.html in Resources */,
 				A5DE18FD20D0BD10000DFDD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +201,14 @@
 				A5DE190120D0BD12000DFDD9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A5DE191120D0D89C000DFDD9 /* Card.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5DE191220D0D89C000DFDD9 /* Base */,
+			);
+			name = Card.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -9,18 +9,18 @@
 import UIKit
 
 extension UserDefaults {
-    enum Keys {
-        static let gameCoint = "gameCoint"
+//    enum Keys {
+//        static let gameCoins = "gameCoins"
 //        static let gameRecord = "gameRecord"
-    }
-    static func getGameCoint() -> Int {
-        let storedValue = UserDefaults.standard.integer(forKey: UserDefaults.Keys.gameCoint)
-        return storedValue
-    }
-    
-    static func setGameCoint(round: Int) {
-        UserDefaults.standard.set(round, forKey: UserDefaults.Keys.gameCoint)
-    }
+//    }
+//    static func getGameCoint() -> Int {
+//        let storedValue = UserDefaults.standard.integer(forKey: UserDefaults.Keys.gameCoins)
+//        return storedValue
+//    }
+//
+//    static func setGameCoint(round: Int) {
+//        UserDefaults.standard.set(round, forKey: UserDefaults.Keys.gameCoins)
+//    }
     
 //    static func getGameRecord() -> Int {
 //        let storedValue = UserDefaults.standard.integer(forKey: UserDefaults.Keys.gameRecord)
