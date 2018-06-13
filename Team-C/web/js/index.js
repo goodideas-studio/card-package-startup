@@ -10,7 +10,7 @@ let rand = 0;
 
 window.onload = function() {
   // init
-  // money = initMoney();
+  money = initMoney();
   moneyUI = document.querySelector('.money-ui');
   cardCover = document.querySelector('.card-cover');
   cardEffect = document.querySelector('.card-effect');
@@ -83,9 +83,9 @@ function processRollClicking(event) {
   money -= rollMoney;
 
   // pass Data to WebView
-  // let dataStr = JSON.stringify(rollList[rollList.length - 1]);
-  // javaScriptCallToSwift.updateCardList(dataStr);
-  // updateMoney(money);
+  let dataStr = JSON.stringify(rollList[rollList.length - 1]);
+  javaScriptCallToSwift.updateCardList(dataStr);
+  updateMoney(money);
 
   // render
   renderMoney(money)
