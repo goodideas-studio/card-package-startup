@@ -23,6 +23,10 @@ body {
   
 }
 
+.balance {
+  color: white
+}
+
 .card-cover {
   display: block;
   width: 108px;
