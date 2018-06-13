@@ -31,7 +31,7 @@ function draw() {
   if(btn.innerText === 'Open') {
     randomDraw()
     calcoin()
-    saveData()
+    javaScriptCallToSwift.saveData(a,b,c)
     btn.innerText = 'Hide'
     draw.style.display = 'block'
     character.style.display = 'block'
@@ -113,7 +113,7 @@ function randomDraw() {
 
 }
 
-javaScriptCallToSwift.saveData(a,b,c)
+// javaScriptCallToSwift.saveData(a,b,c)
 
 function saveData( ) {
   console.log(a,b,c)
