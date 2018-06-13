@@ -13,6 +13,7 @@
 		A5DE18FF20D0BD12000DFDD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5DE18FE20D0BD12000DFDD9 /* Assets.xcassets */; };
 		A5DE190220D0BD12000DFDD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DE190020D0BD12000DFDD9 /* LaunchScreen.storyboard */; };
 		A5DE190A20D0BE7B000DFDD9 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE190920D0BE7B000DFDD9 /* RecordViewController.swift */; };
+		A5DE190C20D0C1D3000DFDD9 /* CardRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE190B20D0C1D3000DFDD9 /* CardRecordCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A5DE190120D0BD12000DFDD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5DE190320D0BD12000DFDD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5DE190920D0BE7B000DFDD9 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		A5DE190B20D0C1D3000DFDD9 /* CardRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRecordCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				A5DE18F720D0BD10000DFDD9 /* AppDelegate.swift */,
 				A5DE18F920D0BD10000DFDD9 /* CardViewController.swift */,
 				A5DE190920D0BE7B000DFDD9 /* RecordViewController.swift */,
+				A5DE190B20D0C1D3000DFDD9 /* CardRecordCell.swift */,
 				A5DE18FB20D0BD10000DFDD9 /* Main.storyboard */,
 				A5DE18FE20D0BD12000DFDD9 /* Assets.xcassets */,
 				A5DE190020D0BD12000DFDD9 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5DE190C20D0C1D3000DFDD9 /* CardRecordCell.swift in Sources */,
 				A5DE190A20D0BE7B000DFDD9 /* RecordViewController.swift in Sources */,
 				A5DE18FA20D0BD10000DFDD9 /* CardViewController.swift in Sources */,
 				A5DE18F820D0BD10000DFDD9 /* AppDelegate.swift in Sources */,
