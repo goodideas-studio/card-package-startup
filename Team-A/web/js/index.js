@@ -23,12 +23,16 @@ window.onload = function () {
     rollListDOM.append(newItem)
   }
 
+  var balance = 500
+
   let rollBtn = document.querySelector('.roll-btn')
+  let testBtn = document.querySelector('.test-btn')
   rollBtn.addEventListener('click', e => {
     removeGlow(cardEffect)
     turnOver(cardCover)
     roll(rollListDOM)
   })
+  testBtn.addEventListener('click', javaScriptCallToSwift.test("test"))
 }
 
 function removeGlow (element) {
@@ -42,6 +46,8 @@ function turnOver (element) {
 function roll (element) {
   element.classList.add('rolled')
 }
+
+function 
 
 let cardList = [
   {
