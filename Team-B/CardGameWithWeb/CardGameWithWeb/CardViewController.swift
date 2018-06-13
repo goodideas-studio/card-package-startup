@@ -2,13 +2,20 @@ import UIKit
 import JavaScriptCore
 
 @objc protocol JavaScriptFuncProtocol: JSExport {
-    func test(_ value: String)
+    func saveData(_ character: String, background: String, conis: String)
 //    func test2(_ value: String, _ num: Int)
 }
 
 class JavaScriptFunc : NSObject, JavaScriptFuncProtocol {
-    func test(_ value: String) {
-        print("value: \(value)")
+    func saveData(_ character: String, background: String, conis coins: String) {
+        UserDefaults.standard.setValue(coins, forKey: "coins")
+        
+        let drawInfo = ["charactor": character, "background": "cardBackground0\(Int(background)!+1)"]
+        print(drawInfo)
+        var cardLists : [[String:String]] = UserDefaults.standard.array(forKey: "record") as? [[String : String]] == nil ? [] : UserDefaults.standard.array(forKey: "record") as! [[String : String]]
+        
+        cardLists.append(drawInfo)
+        UserDefaults.standard.setValue(cardLists, forKey: "record")
     }
 }
 
@@ -34,6 +41,9 @@ class CardViewController: UIViewController, UIWebViewDelegate {
         
         let result: JSValue = context.evaluateScript("add(num1, num2)")
         print("result: \(result)") // 30
+
+       let fun = JavaScriptFunc()
+        fun.saveData("0", background: "2", conis: "5000")
         
     }
 }
