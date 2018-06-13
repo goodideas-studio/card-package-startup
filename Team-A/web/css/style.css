@@ -56,7 +56,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding:0;
-  transition: transform 8s;
+  transition: transform 4s;
   transition-timing-function: cubic-bezier(0.1, 0.96, 0.45, 0.96);
 }
 
