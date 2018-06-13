@@ -1,6 +1,15 @@
 body {
   background-color: black
 }
+
+
+.coin{
+  width: 100px;
+  background-color: #4a4a4a;
+  color: yellow;
+  text-align: right;
+}
+
 .center{
   position: absolute;
   margin: auto;

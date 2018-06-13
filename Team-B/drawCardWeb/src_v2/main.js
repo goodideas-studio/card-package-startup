@@ -1,18 +1,22 @@
-let money= 1000
+// var butt = document.getElementById('btn')
+// butt.addEventListener("click",javaScriptCallToSwift.saveData("a","b"))
 
+let money= 5000
 
 function calcoin(){
+
  let coin = document.getElementById('coin')
  money = money - 100
- // console.log(money)
  coin.innerText= money
 
  if(money==0){
    alert('no money!');
  }
+ c = money
 
 }
 
+var a, b, c;
 
 function draw() {
   let btn = document.getElementById('btn')
@@ -69,10 +73,10 @@ function randomDraw() {
 
   for (let i = 0; i < transitionsCount; i++) {
     var index = Math.floor(Math.random() * imageNames.length)
-
+  console.log(index)
     back.push(`url('img/${imageNames[index]}.png') ${i * 60}px 0px no-repeat`)
   }
-
+  console.log(index)
   character.style.background = back.join()
   character.style.backgroundSize = 'contain'
 
@@ -104,13 +108,11 @@ function randomDraw() {
     default:
       break;
   }
-  return[index,randomBG]
+  a = index
+  b = randomBG
 }
 
 function saveData( ) {
- const [ a, b ] = randomDraw()
- return[ a, b ]
-
-
-
+  console.log(a,b,c)
+ return[ a, b ,c]
 }

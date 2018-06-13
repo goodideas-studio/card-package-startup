@@ -1,5 +1,16 @@
+
+
 body {
   background-color: black
+}
+
+.coin{
+
+  width: 100px;
+  float: right;
+  text-align: right;
+  background-color: #4a4a4a;
+  color: yellow;
 }
 
 .header {

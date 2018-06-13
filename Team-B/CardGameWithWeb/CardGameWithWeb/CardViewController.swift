@@ -50,9 +50,9 @@ class CardViewController: UIViewController, UIWebViewDelegate {
                 jsContext?.setObject(JavaScriptFunc(), forKeyedSubscript: "javaScriptCallToSwift" as (NSCopying & NSObjectProtocol)!)
         
         
-       let fun = JavaScriptFunc()
-//        fun.saveData("0", background: "2", conis: "5000")
-        print(fun.returnCoins())
+//       let fun = JavaScriptFunc()
+////        fun.saveData("0", background: "2", conis: "5000")
+//        print(fun.returnCoins())
         
     }
 }
