@@ -1,9 +1,10 @@
-let money = 0;
+let money = 5000;
 let rollList = [];
 let rollMoney = 300;
 let moneyUI = null;
 let cardCover = null;
 let cardEffect = null;
+let rollListDOM = null;
 
 window.onload = function() {
   // init
@@ -20,7 +21,7 @@ window.onload = function() {
     rollList.push(cardList[rand]);
   }
 
-  let rollListDOM = document.querySelector('.roll-list');
+  rollListDOM = document.querySelector('.roll-list');
   for(let i = 0; i < rollList.length; i++) {
     let newItem = document.createElement('li');
     switch(rollList[i].type) {
@@ -50,9 +51,9 @@ function processRollClicking(event) {
   money -= rollMoney;
 
   // pass Data to WebView
-  let dataStr = JSON.stringify(rollList[rollList.length - 1]);
-  javaScriptCallToSwift.updateCardList(dataStr);
-  updateMoney(money);
+  // let dataStr = JSON.stringify(rollList[rollList.length - 1]);
+  // javaScriptCallToSwift.updateCardList(dataStr);
+  // updateMoney(money);
 
   // render
   renderMoney(money)
