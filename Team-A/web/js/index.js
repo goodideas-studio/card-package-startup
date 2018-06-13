@@ -67,6 +67,7 @@ window.onload = function () {
       removeGlow(cardEffect)
       showCard(cardCover)
       doRoll(rollListDOM)
+
       status = 'show'
       balance -= cost
       theBalance.innerHTML = balance
