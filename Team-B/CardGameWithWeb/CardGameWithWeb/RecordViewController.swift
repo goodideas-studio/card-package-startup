@@ -73,7 +73,7 @@ extension RecordViewController:UICollectionViewDataSource,UICollectionViewDelega
         let blueAnimation = createImages(name: "card_aura_blue_128x128_")
         let greenAnimation = createImages(name: "card_aura_green_128x128_")
         let grayAnimation = createImages(name: "card_aura_gray_128x128_")
-        
+    
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CardRecordCell
         
