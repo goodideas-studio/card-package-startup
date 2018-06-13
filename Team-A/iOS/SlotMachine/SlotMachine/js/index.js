@@ -1,18 +1,18 @@
 window.onload = function () {
   let getBalance = javaScriptCallToSwift.getMoney()
   let balance = getBalance
-  let cost = 20
+  let cost = 50
   let monster
   let rollList = []
   let status = 'hidden'
   let cardCover = document.querySelector('.card-cover')
   let cardEffect = document.querySelector('.card-effect')
-  let bigFog = document.querySelector('.bigFog')
+
   let rollListDOM = document.querySelector('.roll-list')
 
   let theBalance = document.querySelector('.balance')
 
-  theBalance.innerHTML = `$${balance}`
+  theBalance.innerHTML = getBalance
 
   function randomCard () {
     for (let i = 0; i < 20; i++) {
@@ -40,34 +40,27 @@ window.onload = function () {
     rollList = []
   }
 
-  function storedValue () {
-    balance = 500
-    theBalance.innerHTML = balance
-    javaScriptCallToSwift.updateMoney(balance)
-  }
-
   let rollBtn = document.querySelector('.roll-btn')
   let testBtn = document.querySelector('.test-btn')
   rollBtn.addEventListener('click', e => {
+    console.log()
+
     if (balance - cost < 0) {
       alert('餘額不足請盡快儲值！！')
       return
     }
 
     if (status === 'show') {
-      bigFog.style.display = 'block'
       resetCard()
       addGlow(cardEffect)
       hideCard(cardCover)
       resetRoll(rollListDOM)
       status = 'hidden'
     } else {
-      bigFog.style.display = 'none'
       randomCard()
       removeGlow(cardEffect)
       showCard(cardCover)
       doRoll(rollListDOM)
-
       status = 'show'
       balance -= cost
       theBalance.innerHTML = balance

@@ -4,25 +4,8 @@
     100% {opacity: 1;}
 }
 
-@keyframes bigFog {
-  0%   {background-position: 0%;}
-  100% {background-position: 100%;}
-}
-
-@keyframes shine {
-  0%   {opacity: 0;}
-  5%   {opacity: 1;}
-  6%   {opacity: 0;}
-  94%   {opacity: 0;}
-  95%   {opacity: 1;}
-  98%   {opacity: 0;}
-  100% {opacity: 0;}
-}
-
 body {
   background: #000;
-  margin: 0;
-  padding: 0;
 }
 
 /** {
@@ -34,42 +17,14 @@ body {
   position: absolute;
 }
 
-.outer-particle {
-  position: absolute;
-  top: 80px;
-  left: calc(50% - 55px);
-}
-
 .glow {
   box-shadow: 0px 0px 11px 3px #FFF;
   animation: glow 2s linear infinite;
-}
-
-.bigFog {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  left: calc(50% - 150px);
-  top: 0px;
-  background: url('../imgs/card_back_particle.png') no-repeat;
-  background-size: cover;
-  animation: bigFog 2s steps(29) infinite;
-}
-
-.shine {
-  width: 108px;
-  height: 132px;
-  position: absolute;
-  background: white;
-  animation: shine 4s linear;
-  opacity: 0;
+  
 }
 
 .balance {
-  color: white;
-  position: absolute;
-  top: 50px;
-  right: 20px;
+  color: white
 }
 
 .card-cover {
@@ -138,28 +93,4 @@ body {
 
 .roll-list.rolled {
   transform: translateX(-2052px);
-}
-
-.roll-btn {
-  top: 250px;
-}
-
-.storedValue-btn {
-  top: 300px;
-}
-
-.roll-btn, .storedValue-btn {
-  background: url(../imgs/btn-img.png) 0px 0px no-repeat;
-  position: absolute;
-  left: calc(50% - 46px);
-  width: 92px;
-  height: 30px;
-  color: #dee6ef;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 33px;
-  cursor: pointer;
-  text-align: center;
-  overflow: hidden;
-  border: 0;
 }
