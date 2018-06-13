@@ -74,7 +74,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2pe-Dt-w4n" firstAttribute="bottom" secondItem="Hke-Ka-dWT" secondAttribute="bottom" id="XjG-nf-dWS"/>
                             <constraint firstItem="Hke-Ka-dWT" firstAttribute="leading" secondItem="2pe-Dt-w4n" secondAttribute="leading" id="c2C-cg-rhE"/>
@@ -96,7 +96,6 @@
         <!--WebView-->
         <scene sceneID="xxi-kv-xiP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dya-Md-SOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cwO-mf-G9L" customClass="WebViewController" customModule="SlotMachine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uBV-Zg-M5k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -105,9 +104,10 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRc-Cn-Er7">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" flightNumber="YES"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="sRc-Cn-Er7" firstAttribute="top" secondItem="Bch-BG-PXo" secondAttribute="top" id="Uun-pP-FQx"/>
                             <constraint firstItem="Bch-BG-PXo" firstAttribute="bottom" secondItem="sRc-Cn-Er7" secondAttribute="bottom" id="cr2-59-BUp"/>
@@ -121,6 +121,7 @@
                         <outlet property="webView" destination="sRc-Cn-Er7" id="VhF-Ds-XOU"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dya-Md-SOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1021.6" y="85.907046476761622"/>
         </scene>
