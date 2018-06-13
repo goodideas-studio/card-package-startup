@@ -30,5 +30,5 @@ Web 與 App 將通過 Webview 溝通。
 
 這次有點可惜，挑戰賽沒能在下午五點以前完成
 最後還是花了一些時間完成了，效果如下
-![](drawCard.gif)
+![](drawCards.gif)
 
