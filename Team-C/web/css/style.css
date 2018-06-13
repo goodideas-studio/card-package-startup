@@ -1,0 +1,132 @@
+@keyframes glow {
+    0%   {opacity: 1;}
+    50%   {opacity: 0.3;}
+    100% {opacity: 1;}
+}
+
+body {
+  margin: 0;
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+}
+
+.money-ui {
+  color: #FFF;
+  width: auto;
+  height: 5vh;
+}
+
+/** {
+  box-shadow: 0 0 1px red;
+}*/
+.outer-container {
+  width: auto;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-effect {
+  width: 108px;
+  height: 132px;
+  position: absolute;
+}
+
+.glow {
+  box-shadow: 0px 0px 11px 3px #FFF;
+  animation: glow 2s linear infinite;
+  
+}
+
+.card-cover {
+  display: block;
+  width: 108px;
+  height: 132px;
+  position: absolute;
+}
+
+.card-cover img {
+  width: 108px;
+  height: 132px;
+}
+
+.card-cover.disable {
+  display: none;
+}
+
+.card-container {
+  position: relative;
+  height: 132px;
+  width: 108px;
+  overflow: hidden;
+}
+
+.roll-list {
+  width: 2160px;
+  height: auto;
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+  transition-timing-function: cubic-bezier(0.1, 0.96, 0.45, 0.96);
+}
+
+.trans {
+  transition: transform 4s;
+}
+
+.roll-list li {
+  display: inline-block;
+  width: 108px;
+  height: 132px;
+  background-repeat: no-repeat;
+}
+
+.white-card {
+  background: url('../imgs/card_color.png');
+  background-size: cover;
+  background-position: 25% 0%;
+}
+
+.green-card {
+  background: url('../imgs/card_color.png');
+  background-size: cover;
+  background-position: 50% 0%;
+}
+
+.blue-card {
+  background: url('../imgs/card_color.png');
+  background-size: cover;
+  background-position: 75% 0%;
+}
+
+.red-card {
+  background: url('../imgs/card_color.png');
+  background-size: cover;
+  background-position: 100% 0%;
+}
+
+.roll-list.rolled {
+  transform: translateX(-2052px);
+}
+
+.user {
+  text-align: center;
+}
+
+.roll-btn {
+  background: #0489ef;
+  width: 100px;
+  height: 30px;
+  color: #FFF;
+  border-radius: 2px;
+}
+
+.outer-effect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 185px;
+}
