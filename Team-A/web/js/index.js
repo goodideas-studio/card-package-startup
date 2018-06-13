@@ -1,5 +1,6 @@
 window.onload = function () {
-  let balance = 500
+  let getBalance = javaScriptCallToSwift.getMoney()
+  let balance = getBalance
   let cost = 20
   let monster
   let rollList = []
@@ -11,8 +12,7 @@ window.onload = function () {
 
   let theBalance = document.querySelector('.balance')
 
-  var test = javaScriptCallToSwift.test('test')
-  theBalance.innerHTML = test
+  theBalance.innerHTML = getBalance
 
   function randomCard () {
     for (let i = 0; i < 20; i++) {
@@ -63,9 +63,10 @@ window.onload = function () {
       monster = rollList[rollList.length - 1]
       console.log(rollList, monster)
     }
+    javaScriptCallToSwift.getCardInfo(monster.src, monster.type)
   })
 
-  testBtn.addEventListener('click', javaScriptCallToSwift.test(balance))
+  testBtn.addEventListener('click', javaScriptCallToSwift.getCardInfo(balance))
 }
 
 function removeGlow (element) {
