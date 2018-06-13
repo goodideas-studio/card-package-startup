@@ -1,14 +1,19 @@
 let money = 0;
 let rollList = [];
 let rollMoney = 300;
+let moneyUI = null;
 let cardCover = null;
 let cardEffect = null;
 
 window.onload = function() {
   // init
-  money = initMoney();
+  // money = initMoney();
+  moneyUI = document.querySelector('.money-ui');
   cardCover = document.querySelector('.card-cover');
   cardEffect = document.querySelector('.card-effect');
+
+  // render Money
+  moneyUI.textContent = `Money: ${money}`;
 
   for(let i = 0; i < 20; i++) {
     let rand = Math.floor((Math.random() * cardList.length));
