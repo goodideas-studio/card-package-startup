@@ -17,13 +17,13 @@ import JavaScriptCore
 class JavaScriptFunc:NSObject, JavaScriptFuncProtcol{
     
     func updateCardList(_ result:String){
-        UserDefaults.standard.setValue(result, forKey: "resultJSON")
+        UserDefaults.standard.setValue(result, forKey: UserDefaultsKeyManager.resultJSON)
         print(result)
         
     }
     
     func updateMoney(money: Int) {
-        UserDefaults.standard.set(money, forKey: "remainingMoney")
+        UserDefaults.standard.set(money, forKey: UserDefaultsKeyManager.remainingMoney)
     }    
     
     
@@ -32,13 +32,18 @@ class JavaScriptFunc:NSObject, JavaScriptFuncProtcol{
 
 class WebViewController: UIViewController, UIWebViewDelegate{
     
-    var jsonDataFromWebView:String?
+    var jsonDataFromWebView:String? = UserDefaults.standard.string(forKey: UserDefaultsKeyManager.resultJSON) ?? ""{
+        didSet{
+            UserDefaults.standard.set(jsonDataFromWebView, forKey: UserDefaultsKeyManager.resultJSON)
+            print(UserDefaults.standard.string(forKey: UserDefaultsKeyManager.resultJSON))
+        }
+    }
     var remainingMoney:Int?
     
     @IBOutlet weak var webView: UIWebView!
     
     func getMoney()->Int{
-        return UserDefaults.standard.integer(forKey: "remainingMoney")
+        return UserDefaults.standard.integer(forKey: UserDefaultsKeyManager.remainingMoney)
     }
     
     override func viewDidLoad() {

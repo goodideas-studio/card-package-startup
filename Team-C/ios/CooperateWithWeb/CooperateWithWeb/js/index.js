@@ -55,9 +55,16 @@ function processRollClicking(event) {
   roll(rollListDOM);
 }
 
-function initMoney() {
+function initMoney(callback) {
   let money = javaScriptCallToSwift.getMoney();
+  callback(money);
   return money || 0;
+}
+
+function renderMoney(money) {
+    let moneyUI = document.createElement('div')
+    moneyUI.innerHTML = money;
+    document.querySelector('body').append(moneyUI);
 }
 
 function updateMoney(money) {
