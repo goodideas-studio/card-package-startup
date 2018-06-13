@@ -14,11 +14,8 @@
 		D61EC28220D0CC7D00715217 /* CardResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61EC28120D0CC7D00715217 /* CardResultViewController.swift */; };
 		D61EC28520D0CCC700715217 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61EC28420D0CCC700715217 /* WebViewController.swift */; };
 		D64FF4C320D0CEA300F3BA50 /* CardResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FF4C220D0CEA300F3BA50 /* CardResultCollectionViewCell.swift */; };
-		D64FF50A20D0D9EB00F3BA50 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = D64FF50520D0D9EA00F3BA50 /* index.html */; };
-		D64FF50B20D0D9EB00F3BA50 /* js in Resources */ = {isa = PBXBuildFile; fileRef = D64FF50620D0D9EA00F3BA50 /* js */; };
 		D64FF50C20D0D9EB00F3BA50 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D64FF50720D0D9EA00F3BA50 /* README.md */; };
-		D64FF50D20D0D9EB00F3BA50 /* imgs in Resources */ = {isa = PBXBuildFile; fileRef = D64FF50820D0D9EB00F3BA50 /* imgs */; };
-		D64FF50E20D0D9EB00F3BA50 /* css in Resources */ = {isa = PBXBuildFile; fileRef = D64FF50920D0D9EB00F3BA50 /* css */; };
+		D64FF51320D0EEC500F3BA50 /* UserDefaultsKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FF51220D0EEC500F3BA50 /* UserDefaultsKeyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +28,8 @@
 		D61EC28120D0CC7D00715217 /* CardResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardResultViewController.swift; sourceTree = "<group>"; };
 		D61EC28420D0CCC700715217 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D64FF4C220D0CEA300F3BA50 /* CardResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardResultCollectionViewCell.swift; sourceTree = "<group>"; };
-		D64FF50520D0D9EA00F3BA50 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		D64FF50620D0D9EA00F3BA50 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
 		D64FF50720D0D9EA00F3BA50 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D64FF50820D0D9EB00F3BA50 /* imgs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = imgs; sourceTree = "<group>"; };
-		D64FF50920D0D9EB00F3BA50 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
+		D64FF51220D0EEC500F3BA50 /* UserDefaultsKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,15 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				D61EC26F20D0CAA300715217 /* AppDelegate.swift */,
+				D64FF51220D0EEC500F3BA50 /* UserDefaultsKeyManager.swift */,
 				D64FF51120D0DF3300F3BA50 /* Model */,
 				D61EC28320D0CC8200715217 /* Controllers */,
 				D64FF4C420D0CEA700F3BA50 /* View */,
 				D61EC27620D0CAA400715217 /* Assets.xcassets */,
 				D61EC27320D0CAA300715217 /* Main.storyboard */,
-				D64FF50920D0D9EB00F3BA50 /* css */,
-				D64FF50820D0D9EB00F3BA50 /* imgs */,
-				D64FF50520D0D9EA00F3BA50 /* index.html */,
-				D64FF50620D0D9EA00F3BA50 /* js */,
 				D64FF50720D0D9EA00F3BA50 /* README.md */,
 				D61EC27820D0CAA400715217 /* LaunchScreen.storyboard */,
 				D61EC27B20D0CAA500715217 /* Info.plist */,
@@ -168,11 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D64FF50C20D0D9EB00F3BA50 /* README.md in Resources */,
-				D64FF50B20D0D9EB00F3BA50 /* js in Resources */,
 				D61EC27A20D0CAA400715217 /* LaunchScreen.storyboard in Resources */,
-				D64FF50D20D0D9EB00F3BA50 /* imgs in Resources */,
-				D64FF50E20D0D9EB00F3BA50 /* css in Resources */,
-				D64FF50A20D0D9EB00F3BA50 /* index.html in Resources */,
 				D61EC27720D0CAA400715217 /* Assets.xcassets in Resources */,
 				D61EC27520D0CAA300715217 /* Main.storyboard in Resources */,
 			);
@@ -188,6 +175,7 @@
 				D61EC28220D0CC7D00715217 /* CardResultViewController.swift in Sources */,
 				D64FF4C320D0CEA300F3BA50 /* CardResultCollectionViewCell.swift in Sources */,
 				D61EC28520D0CCC700715217 /* WebViewController.swift in Sources */,
+				D64FF51320D0EEC500F3BA50 /* UserDefaultsKeyManager.swift in Sources */,
 				D61EC27020D0CAA300715217 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

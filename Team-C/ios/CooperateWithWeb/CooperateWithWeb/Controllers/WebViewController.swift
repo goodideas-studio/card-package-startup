@@ -10,36 +10,57 @@ import UIKit
 import JavaScriptCore
 
 @objc protocol JavaScriptFuncProtcol: JSExport{
-    func updateMoney(money:Int)
+    func updateMoney(_ money:Int)
     func updateCardList(_ result:String)
+    func getMoney()->Int
 }
 
 class JavaScriptFunc:NSObject, JavaScriptFuncProtcol{
     
+    var gameMoney = 50000
+    
+    func getMoney()->Int{
+        print(self.gameMoney)
+        return self.gameMoney
+//        if UserDefaults.standard.integer(forKey: UserDefaultsKeyManager.remainingMoney) != nil{
+//            print("1")
+//            return UserDefaults.standard.integer(forKey: UserDefaultsKeyManager.remainingMoney)
+//        }else{
+//            print("500")
+//            return 500
+//        }
+    }
+    
     func updateCardList(_ result:String){
-        UserDefaults.standard.setValue(result, forKey: "resultJSON")
+        print("updateCard")
+        UserDefaults.standard.setValue(result, forKey: UserDefaultsKeyManager.resultJSON)
         print(result)
         
     }
     
-    func updateMoney(money: Int) {
-        UserDefaults.standard.set(money, forKey: "remainingMoney")
-    }    
-    
-    
+    func updateMoney(_ money: Int) {
+        print("updateMoney")
+        UserDefaults.standard.set(money, forKey: UserDefaultsKeyManager.remainingMoney)
+    }
     
 }
 
 class WebViewController: UIViewController, UIWebViewDelegate{
     
-    var jsonDataFromWebView:String?
+//    var jsonDataFromWebView:String? = UserDefaults.standard.string(forKey: UserDefaultsKeyManager.resultJSON) ?? ""{
+//        didSet{
+//            UserDefaults.standard.set(jsonDataFromWebView, forKey: UserDefaultsKeyManager.resultJSON)
+//            print(UserDefaults.standard.string(forKey: UserDefaultsKeyManager.resultJSON))
+//        }
+//    }
+    
+    
+    
     var remainingMoney:Int?
     
     @IBOutlet weak var webView: UIWebView!
     
-    func getMoney()->Int{
-        return UserDefaults.standard.integer(forKey: "remainingMoney")
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
