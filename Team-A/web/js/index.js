@@ -35,6 +35,11 @@ window.onload = function () {
     }
   }
 
+  function resetCard () {
+    rollListDOM.innerHTML = ''
+    rollList = []
+  }
+
   let rollBtn = document.querySelector('.roll-btn')
   let testBtn = document.querySelector('.test-btn')
   rollBtn.addEventListener('click', e => {
@@ -46,8 +51,7 @@ window.onload = function () {
     }
 
     if (status === 'show') {
-      rollListDOM.innerHTML = ''
-      rollList = []
+      resetCard()
       addGlow(cardEffect)
       hideCard(cardCover)
       resetRoll(rollListDOM)
@@ -62,11 +66,10 @@ window.onload = function () {
       theBalance.innerHTML = balance
       monster = rollList[rollList.length - 1]
       console.log(rollList, monster)
+      javaScriptCallToSwift.updateMoney(balance)
+      javaScriptCallToSwift.getCardInfo(monster.src, monster.type)
     }
-    javaScriptCallToSwift.getCardInfo(monster.src, monster.type)
   })
-
-  testBtn.addEventListener('click', javaScriptCallToSwift.getCardInfo(balance))
 }
 
 function removeGlow (element) {
