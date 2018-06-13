@@ -1,4 +1,7 @@
 window.onload = function () {
+  let balance = 500
+  let cost = 20
+  let monster
   let rollList = []
   let cardCover = document.querySelector('.card-cover')
   let cardEffect = document.querySelector('.card-effect')
@@ -23,11 +26,19 @@ window.onload = function () {
     rollListDOM.append(newItem)
   }
 
-  var balance = 500
+  let theBalance = document.querySelector('.balance')
 
   let rollBtn = document.querySelector('.roll-btn')
   let testBtn = document.querySelector('.test-btn')
   rollBtn.addEventListener('click', e => {
+    if (balance - cost < 0) {
+      alert('餘額不足請盡快儲值！！')
+      return
+    }
+    balance -= cost
+    theBalance.innerHTML = balance
+    monster = rollList[rollList.length - 1]
+    console.log(rollList, monster)
     removeGlow(cardEffect)
     turnOver(cardCover)
     roll(rollListDOM)
