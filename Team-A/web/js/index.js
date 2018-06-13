@@ -32,7 +32,7 @@ window.onload = function () {
     turnOver(cardCover)
     roll(rollListDOM)
   })
-  testBtn.addEventListener('click', javaScriptCallToSwift.test("test"))
+  testBtn.addEventListener('click', javaScriptCallToSwift.test('test'))
 }
 
 function removeGlow (element) {
@@ -46,8 +46,6 @@ function turnOver (element) {
 function roll (element) {
   element.classList.add('rolled')
 }
-
-function 
 
 let cardList = [
   {
