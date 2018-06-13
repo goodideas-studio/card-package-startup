@@ -47,12 +47,15 @@ class JavaScriptFunc:NSObject, JavaScriptFuncProtcol{
 
 class WebViewController: UIViewController, UIWebViewDelegate{
     
-    var jsonDataFromWebView:String? = UserDefaults.standard.string(forKey: UserDefaultsKeyManager.resultJSON) ?? ""{
-        didSet{
-            UserDefaults.standard.set(jsonDataFromWebView, forKey: UserDefaultsKeyManager.resultJSON)
-            print(UserDefaults.standard.string(forKey: UserDefaultsKeyManager.resultJSON))
-        }
-    }
+//    var jsonDataFromWebView:String? = UserDefaults.standard.string(forKey: UserDefaultsKeyManager.resultJSON) ?? ""{
+//        didSet{
+//            UserDefaults.standard.set(jsonDataFromWebView, forKey: UserDefaultsKeyManager.resultJSON)
+//            print(UserDefaults.standard.string(forKey: UserDefaultsKeyManager.resultJSON))
+//        }
+//    }
+    
+    
+    
     var remainingMoney:Int?
     
     @IBOutlet weak var webView: UIWebView!

@@ -10,6 +10,7 @@ import UIKit
 
 class CardResultViewController: UIViewController {
     
+    let jsonString = UserDefaults.standard.string(forKey: UserDefaultsKeyManager.resultJSON)
     
     @IBOutlet weak var cardResultCollectionView: UICollectionView!
     
