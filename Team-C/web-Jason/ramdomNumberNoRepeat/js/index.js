@@ -6,7 +6,7 @@ function randomCardIndex(n) { //10張卡中拿到拿到n張不重複的卡
     let cardArr = [] //隨機得到數字的陣列
 
     function isFind(rdmNum) { //是否有找到，「這裏的rdmNum是參數」
-        return cardArr.indexOF(rdmNum) !== -1 //沒找到時 得到 -1 !== -1 => true
+        return cardArr.indexOf(rdmNum) !== -1 //沒找到時 得到 -1 !== -1 => true
     }
 
 
