@@ -32,7 +32,8 @@ function draw() {
   if(btn.innerText === 'Open') {
     randomDraw()
     calcoin()
-    javaScriptCallToSwift.saveData(a,b,c)
+    saveData()
+    // javaScriptCallToSwift.saveData(a,b,c)
     btn.innerText = 'Hide'
     draw.style.display = 'block'
     character.style.display = 'block'
@@ -71,13 +72,19 @@ function randomDraw() {
   let character = document.getElementById('character')
   let back = []
   let transitionsCount = 12
-
+  // console.log(imageNames.length)
   for (let i = 0; i < transitionsCount; i++) {
+
+
   var index = Math.floor(Math.random() * imageNames.length)
-  console.log(index)
-    back.push(`url('img/${imageNames[index]}.png') ${i * 60}px 0px no-repeat`)
+  if (i==10){
+    a = index
   }
-  console.log(index)
+    back.push(`url('img/${imageNames[index]}.png') ${i * 60}px 0px no-repeat`)
+ console.log(index)
+  }
+
+ 
   character.style.background = back.join()
   character.style.backgroundSize = 'contain'
 
@@ -109,7 +116,8 @@ function randomDraw() {
     default:
       break;
   }
-  a = index
+
+
   b = randomBG
 
 }
