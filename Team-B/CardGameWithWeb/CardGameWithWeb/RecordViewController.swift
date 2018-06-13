@@ -56,8 +56,8 @@ extension RecordViewController:UICollectionViewDataSource,UICollectionViewDelega
         let blueAnimation = createImages(name: "card_aura_blue_128x128_")
         let greenAnimation = createImages(name: "card_aura_green_128x128_")
         let grayAnimation = createImages(name: "card_aura_gray_128x128_")
-    
-
+        
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CardRecordCell
         
         if playRecords.count == 0 {
@@ -66,19 +66,30 @@ extension RecordViewController:UICollectionViewDataSource,UICollectionViewDelega
         }
         
         guard playRecords.count > 0 else { return cell }
+        
         cell.recordLabel.text = "第 \(indexPath.item + 1) 抽"
         cell.colorView.image = UIImage(named: playRecords[indexPath.item]["background"]!)
         cell.cardView.image = UIImage(named: playRecords[indexPath.item]["character"]!)
-        cell.animationView.image = UIImage()
+        cell.animationView.animationDuration = 2
+        cell.isUserInteractionEnabled = false
+        
         switch playRecords[indexPath.item]["background"] {
         case "cardBackground05":
-             cell.animationView.image = UIImage.animatedImage(with: redAnimation, duration: 2)
+            cell.animationView.animationImages = redAnimation
+            cell.animationView.startAnimating()
+            
         case "cardBackground04":
-            cell.animationView.image = UIImage.animatedImage(with: blueAnimation, duration: 2)
+            cell.animationView.animationImages = blueAnimation
+            cell.animationView.startAnimating()
+            
         case "cardBackground03":
-            cell.animationView.image = UIImage.animatedImage(with: greenAnimation, duration: 2)
+            cell.animationView.animationImages = greenAnimation
+            cell.animationView.startAnimating()
+
         case "cardBackground02":
-            cell.animationView.image = UIImage.animatedImage(with: grayAnimation, duration: 2)
+            cell.animationView.animationImages = grayAnimation
+            cell.animationView.startAnimating()
+
         default:
             break
         }
