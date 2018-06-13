@@ -149,7 +149,7 @@ body {
 }
 
 .roll-btn, .storedValue-btn {
-  background: url(http://www.olgame.tw/lm/css/lmimg/gacha/btn_blue_92x31.png) 0px 0px no-repeat;
+  background: url(../imgs/btn-img.png) 0px 0px no-repeat;
   position: absolute;
   left: calc(50% - 46px);
   width: 92px;
