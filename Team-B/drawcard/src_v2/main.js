@@ -1,5 +1,5 @@
-var btn = document.getElementById('btn')
-btn.addEventListener("click",draw)
+// var btn = document.getElementById('btn')
+// btn.addEventListener("click",draw)
 
 let money= 1000
 
@@ -19,7 +19,7 @@ function calcoin(){
 var a, b, c;
 
 function draw() {
-  // let btn = document.getElementById('btn')
+  let btn = document.getElementById('btn')
   let transitions = document.getElementById('transitions')
   let draw = document.getElementById('draw')
   let character = document.getElementById('character')
@@ -28,6 +28,7 @@ function draw() {
   let white = document.getElementById('white')
   let endwhite = document.getElementById('endwhite')
   let endidle = document.getElementById('endidle')
+
   if(btn.innerText === 'Open') {
     randomDraw()
     calcoin()
