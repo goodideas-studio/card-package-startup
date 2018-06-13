@@ -69,7 +69,7 @@ extension RecordViewController:UICollectionViewDataSource,UICollectionViewDelega
         cell.recordLabel.text = "第 \(indexPath.item + 1) 抽"
         cell.colorView.image = UIImage(named: playRecords[indexPath.item]["background"]!)
         cell.cardView.image = UIImage(named: playRecords[indexPath.item]["character"]!)
-        
+        cell.animationView.image = UIImage()
         switch playRecords[indexPath.item]["background"] {
         case "cardBackground05":
              cell.animationView.image = UIImage.animatedImage(with: redAnimation, duration: 2)
@@ -82,7 +82,6 @@ extension RecordViewController:UICollectionViewDataSource,UICollectionViewDelega
         default:
             break
         }
-        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
