@@ -52,7 +52,7 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         myCollectionCell.maskImage.image = UIImage(named: "C\(myCollectionArray[indexPath.row]["color"]!)")
         
         
-        myCollectionCell.characterInfo.text = "第\(indexPath.row + 1)抽"
+        myCollectionCell.characterInfo.text = "第\(indexPath.row + 1)抽 * \(myCollectionArray[indexPath.row]["number"]!)"
         
         return myCollectionCell
         
