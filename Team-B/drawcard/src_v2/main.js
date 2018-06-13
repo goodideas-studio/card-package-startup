@@ -1,64 +1,71 @@
-// var btn = document.getElementById('btn')
-// btn.addEventListener("click",draw)
+ var btn = document.getElementById('btn')
+ btn.addEventListener("click",draw)
 
-let money= 1000
+let money= javaScriptCallToSwift.returnCoins()
+coin.innerText = money
 
 function calcoin(){
 
  let coin = document.getElementById('coin')
- money = money - 100
- coin.innerText= money
+ 
 
- if(money==0){
+ if(money < 100){
    alert('no money!');
+    btn.removeEventListener('click', draw)
+ } else {
+     money = money - 100
+     coin.innerText= money
+     c = money
  }
- c = money
+    
 
 }
 
 var a, b, c;
 
 function draw() {
-  let btn = document.getElementById('btn')
-  let transitions = document.getElementById('transitions')
-  let draw = document.getElementById('draw')
-  let character = document.getElementById('character')
-  let card = document.getElementById('card')
-  let idle = document.getElementById('idle')
-  let white = document.getElementById('white')
-  let endwhite = document.getElementById('endwhite')
-  let endidle = document.getElementById('endidle')
-
-  if(btn.innerText === 'Open') {
-    randomDraw()
-    calcoin()
-    saveData()
-    // javaScriptCallToSwift.saveData(a,b,c)
-    btn.innerText = 'Hide'
-    draw.style.display = 'block'
-    character.style.display = 'block'
-    card.style.display = 'none'
-    idle.style.display = 'none'
-    white.style.display = 'none'
-    transitions.style.border = '1px solid #fff'
-    character.addEventListener('animationend', () => {
-      endwhite.style.display = 'block'
-      endwhite.addEventListener('animationend', () => {
-        endidle.style.display = 'block'
-        transitions.style.border = '0px'
-      })
-    }, false)
-  }
-  else {
-    btn.innerText = 'Open'
-    card.style.display = 'block'
-    idle.style.display = 'block'
-    white.style.display = 'block'
-    draw.style.display = 'none'
-    character.style.display = 'none'
-    endwhite.style.display = 'none'
-    endidle.style.display = 'none'
-  }
+    //  let btn = document.getElementById('btn')
+    if (money >= 100) {
+        let transitions = document.getElementById('transitions')
+        let draw = document.getElementById('draw')
+        let character = document.getElementById('character')
+        let card = document.getElementById('card')
+        let idle = document.getElementById('idle')
+        let white = document.getElementById('white')
+        let endwhite = document.getElementById('endwhite')
+        let endidle = document.getElementById('endidle')
+        
+        if(btn.innerText === 'Open') {
+            randomDraw()
+            calcoin()
+            saveData()
+            javaScriptCallToSwift.saveData(a,b,c)
+            btn.innerText = 'Hide'
+            draw.style.display = 'block'
+            character.style.display = 'block'
+            card.style.display = 'none'
+            idle.style.display = 'none'
+            white.style.display = 'none'
+            transitions.style.border = '1px solid #fff'
+            character.addEventListener('animationend', () => {
+                                       endwhite.style.display = 'block'
+                                       endwhite.addEventListener('animationend', () => {
+                                                                 endidle.style.display = 'block'
+                                                                 transitions.style.border = '0px'
+                                                                 })
+                                       }, false)
+        }
+        else {
+            btn.innerText = 'Open'
+            card.style.display = 'block'
+            idle.style.display = 'block'
+            white.style.display = 'block'
+            draw.style.display = 'none'
+            character.style.display = 'none'
+            endwhite.style.display = 'none'
+            endidle.style.display = 'none'
+        }
+    }
 }
 
 let imageNames = [6,10,20,24,27,42,46,56,69,90]
