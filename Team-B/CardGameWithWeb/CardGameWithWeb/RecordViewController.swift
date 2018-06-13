@@ -15,13 +15,10 @@ class RecordViewController: UIViewController {
     var playRecords = [[String:String]]()
     
     func createImages(name: String) -> [UIImage] {
-        
         var images = [UIImage]()
-        
         for i in 1...30 {
             var imageName: String = name
             if i < 10 {
-                //card_aura_red_128x128_01
                 imageName += "0\(i)"
                 images.append(UIImage(named: imageName)!)
             } else {
