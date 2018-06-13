@@ -1,8 +1,12 @@
+let money = 0;
 let rollList = [];
-let cardCovder = null;
+let rollMoney = 300;
+let cardCover = null;
 let cardEffect = null;
 
 window.onload = function() {
+  // init
+  money = initMoney();
   cardCover = document.querySelector('.card-cover');
   cardEffect = document.querySelector('.card-effect');
 
@@ -27,14 +31,38 @@ window.onload = function() {
   }
 
   let rollBtn = document.querySelector('.roll-btn');
-  rollBtn.addEventListener('click', e => {
-    let passedData = JSON.stringify(rollList[rollList.length - 1]);
-    javaScriptCallToSwift.updateCardList(passedData);
-    removeGlow(cardEffect);
-    turnOver(cardCover);
-    roll(rollListDOM);
-  });
+  rollBtn.addEventListener('click', processRollClicking);
 };
+
+function processRollClicking(event) {
+  // check if money is enough
+  if(money < rollMoney) {
+    // prompt Notice
+    console.log('No money left.')
+    return;
+  }
+  // Consume money
+  money -= rollMoney;
+
+  // pass Data to WebView
+  let dataStr = JSON.stringify(rollList[rollList.length - 1]);
+  javaScriptCallToSwift.updateCardList(dataStr);
+  updateMoney(money);
+
+  // render
+  removeGlow(cardEffect);
+  turnOver(cardCover);
+  roll(rollListDOM);
+}
+
+function initMoney() {
+  let money = javaScriptCallToSwift.getMoney();
+  return money || 0;
+}
+
+function updateMoney(money) {
+  javaScriptCallToSwift.updateMoney(money);
+}
 
 function removeGlow(element) {
   element.classList.remove('glow');
