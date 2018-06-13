@@ -60,12 +60,12 @@ class JavaScriptMethod : NSObject, JavaScriptFuncProtocol {
                     imageDic[i]["number"] = number
                     UserDefaults.standard.set(imageDic, forKey: "imageDic")
                     return
-                } else {
-                    imageDic.append(thisDic)
-                    UserDefaults.standard.set(imageDic, forKey: "imageDic")
-                    return
                 }
             }
+            
+            imageDic.append(thisDic)
+            UserDefaults.standard.set(imageDic, forKey: "imageDic")
+            return
         }
         print(UserDefaults.standard.value(forKey: "imageDic") as! [[String:Any]] )
 

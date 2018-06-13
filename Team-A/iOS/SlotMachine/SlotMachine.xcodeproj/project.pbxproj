@@ -15,11 +15,11 @@
 		5E0AD76220D0BE32006C9987 /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AD76120D0BE32006C9987 /* MyCollectionViewController.swift */; };
 		5E0AD76420D0BF70006C9987 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AD76320D0BF70006C9987 /* CardModel.swift */; };
 		5E0AD76620D0C167006C9987 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AD76520D0C167006C9987 /* MyCollectionViewCell.swift */; };
-		5E0AD7DA20D11530006C9987 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7D520D1152F006C9987 /* index.js */; };
-		5E0AD7DB20D11530006C9987 /* imgs in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7D620D1152F006C9987 /* imgs */; };
-		5E0AD7DC20D11530006C9987 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7D720D1152F006C9987 /* index.html */; };
-		5E0AD7DD20D11530006C9987 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7D820D1152F006C9987 /* js */; };
-		5E0AD7DE20D11530006C9987 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7D920D11530006C9987 /* css */; };
+		5E0AD7EE20D11859006C9987 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7E920D11859006C9987 /* css */; };
+		5E0AD7EF20D11859006C9987 /* imgs in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7EA20D11859006C9987 /* imgs */; };
+		5E0AD7F020D11859006C9987 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7EB20D11859006C9987 /* js */; };
+		5E0AD7F120D11859006C9987 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7EC20D11859006C9987 /* index.html */; };
+		5E0AD7F220D11859006C9987 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7ED20D11859006C9987 /* index.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +33,11 @@
 		5E0AD76120D0BE32006C9987 /* MyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
 		5E0AD76320D0BF70006C9987 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		5E0AD76520D0C167006C9987 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
-		5E0AD7D520D1152F006C9987 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
-		5E0AD7D620D1152F006C9987 /* imgs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = imgs; path = ../../../../../web/imgs; sourceTree = "<group>"; };
-		5E0AD7D720D1152F006C9987 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../../../../../web/index.html; sourceTree = "<group>"; };
-		5E0AD7D820D1152F006C9987 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; name = js; path = ../../../../../web/js; sourceTree = "<group>"; };
-		5E0AD7D920D11530006C9987 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; name = css; path = ../../../../../web/css; sourceTree = "<group>"; };
+		5E0AD7E920D11859006C9987 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; name = css; path = "../../../未命名檔案夾 2/css"; sourceTree = "<group>"; };
+		5E0AD7EA20D11859006C9987 /* imgs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = imgs; path = "../../../未命名檔案夾 2/imgs"; sourceTree = "<group>"; };
+		5E0AD7EB20D11859006C9987 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; name = js; path = "../../../未命名檔案夾 2/js"; sourceTree = "<group>"; };
+		5E0AD7EC20D11859006C9987 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = "../../../未命名檔案夾 2/index.html"; sourceTree = "<group>"; };
+		5E0AD7ED20D11859006C9987 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = index.js; path = "../../../未命名檔案夾 2/js/index.js"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +77,11 @@
 				5E0AD76520D0C167006C9987 /* MyCollectionViewCell.swift */,
 				5E0AD75120D0BB6B006C9987 /* Main.storyboard */,
 				5E0AD75420D0BB70006C9987 /* Assets.xcassets */,
-				5E0AD7D920D11530006C9987 /* css */,
-				5E0AD7D620D1152F006C9987 /* imgs */,
-				5E0AD7D720D1152F006C9987 /* index.html */,
-				5E0AD7D520D1152F006C9987 /* index.js */,
-				5E0AD7D820D1152F006C9987 /* js */,
+				5E0AD7E920D11859006C9987 /* css */,
+				5E0AD7EA20D11859006C9987 /* imgs */,
+				5E0AD7EC20D11859006C9987 /* index.html */,
+				5E0AD7ED20D11859006C9987 /* index.js */,
+				5E0AD7EB20D11859006C9987 /* js */,
 				5E0AD75620D0BB70006C9987 /* LaunchScreen.storyboard */,
 				5E0AD75920D0BB70006C9987 /* Info.plist */,
 			);
@@ -146,14 +146,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E0AD7F120D11859006C9987 /* index.html in Resources */,
+				5E0AD7EE20D11859006C9987 /* css in Resources */,
+				5E0AD7F020D11859006C9987 /* js in Resources */,
+				5E0AD7F220D11859006C9987 /* index.js in Resources */,
 				5E0AD75820D0BB70006C9987 /* LaunchScreen.storyboard in Resources */,
 				5E0AD75520D0BB70006C9987 /* Assets.xcassets in Resources */,
 				5E0AD75320D0BB6B006C9987 /* Main.storyboard in Resources */,
-				5E0AD7DD20D11530006C9987 /* js in Resources */,
-				5E0AD7DE20D11530006C9987 /* css in Resources */,
-				5E0AD7DC20D11530006C9987 /* index.html in Resources */,
-				5E0AD7DA20D11530006C9987 /* index.js in Resources */,
-				5E0AD7DB20D11530006C9987 /* imgs in Resources */,
+				5E0AD7EF20D11859006C9987 /* imgs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
