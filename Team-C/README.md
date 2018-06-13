@@ -11,3 +11,5 @@ Start Stage II: Data passing
 13:10
 
 Finished Stage II : Data can pass
+
+Start development process : logic part

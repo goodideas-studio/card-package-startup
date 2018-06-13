@@ -13,7 +13,7 @@ window.onload = function() {
   cardEffect = document.querySelector('.card-effect');
 
   // render Money
-  moneyUI.textContent = `Money: ${money}`;
+  renderMoney(money);
 
   for(let i = 0; i < 20; i++) {
     let rand = Math.floor((Math.random() * cardList.length));
@@ -55,6 +55,7 @@ function processRollClicking(event) {
   updateMoney(money);
 
   // render
+  renderMoney(money)
   removeGlow(cardEffect);
   turnOver(cardCover);
   roll(rollListDOM);
@@ -63,6 +64,10 @@ function processRollClicking(event) {
 function initMoney() {
   let money = javaScriptCallToSwift.getMoney();
   return money || 0;
+}
+
+function renderMoney(money) {
+  moneyUI.textContent = `Money: ${money}`;
 }
 
 function updateMoney(money) {
