@@ -1,0 +1,114 @@
+body{
+    background-color: black;
+    /* 輪播卡片 */
+    .cardContainer{
+        width: 101px;
+        height: 131px;
+        background: white;
+        position: relative;
+        left: 45px;
+        top: 20px;
+        overflow: hidden;
+        transform: translateX(0);
+        .list{
+            z-index: 2;
+            position: absolute;
+            width: 1100px;
+            height: 132px;
+            transform: translateX(0);
+            transition: all 5s ease-in-out;
+            img{
+                width: 110px;
+                height: 132px;
+                float: left;
+            }
+        }
+    }
+    /* 卡背 */
+    .cardBack{
+        width: 101px;
+        height: 131px;
+        background: transparent url("../../image/card_back.png");
+        position: absolute;
+        left: 45px;
+        top: 20px;
+        display: block;
+        z-index: 5;
+    }
+    /* 邊框閃爍 */
+    .shadowLight {
+        background: transparent url("../../image/border_halo.png") no-repeat -1px -4px;
+        background-size: 621px 151px;
+        width: 119px;
+        height: 145px;
+        position: absolute;
+        left: 35px;
+        top: 14px;
+        display:block;
+        z-index: 3;
+        animation: shinning .8s infinite;
+    }
+    /* 背景雷電 */
+    .lighting{
+        background: transparent url("../../image/gray_aura.png") left center;
+        width: 128px;
+        height: 128px;
+        position: absolute;
+        left: 32px;
+        top: 18px;
+        display: block;
+        z-index: 2;
+        animation: flesh .8s infinite steps(30);
+        transform: scale(2.5);
+        
+        @keyframes flesh {
+            100%{
+                background-position-x: -3840px;
+            }
+        }
+    }
+
+    /* 抽卡開始與結束時的閃爍 */
+    .cardShine {
+        background: transparent url("../../image/card_shine.png") no-repeat;
+        background-size: 663px 170px;
+        background-position: center;
+        width: 115px;
+        height: 137px;
+        position: absolute;
+        left: 42px;
+        top: 18px;
+        z-index: 10;
+    }
+
+    .openBtn{
+        width: 100px;
+        height: 30px;
+        border: 1px solid black;
+        background: transparent url("../../image/btn-img.png") no-repeat;
+        color:black;        
+        position: relative;
+        top: 100px;
+        left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+
+
+        @keyframes shinning {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.75;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
