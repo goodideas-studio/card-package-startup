@@ -1,10 +1,12 @@
-let money = 5000;
+let money = 0;
 let rollList = [];
 let rollMoney = 300;
 let moneyUI = null;
 let cardCover = null;
 let cardEffect = null;
 let rollListDOM = null;
+let isRollDone = true;
+let rand = 0;
 
 window.onload = function() {
   // init
@@ -16,12 +18,32 @@ window.onload = function() {
   // render Money
   renderMoney(money);
 
+  // build roll list
+  buildListDOM();
+
+  let rollBtn = document.querySelector('.roll-btn');
+  rollBtn.addEventListener('click', processRollClicking);
+  rollListDOM.addEventListener('transitionend', doneRoll);
+};
+
+function doneRoll() {
+  isRollDone = true;
+  rollListDOM.classList.remove('trans');
+}
+
+function buildListDOM() {
+  // clean roll list
+  rollList = [];
+
   for(let i = 0; i < 20; i++) {
-    let rand = Math.floor((Math.random() * cardList.length));
+    rand = Math.floor((Math.random() * cardList.length));
     rollList.push(cardList[rand]);
   }
 
   rollListDOM = document.querySelector('.roll-list');
+  // clean roll list dom
+  rollListDOM.innerHTML = '';
+
   for(let i = 0; i < rollList.length; i++) {
     let newItem = document.createElement('li');
     switch(rollList[i].type) {
@@ -35,18 +57,28 @@ window.onload = function() {
     newItem.append(newImg);
     rollListDOM.append(newItem);
   }
-
-  let rollBtn = document.querySelector('.roll-btn');
-  rollBtn.addEventListener('click', processRollClicking);
-};
+}
 
 function processRollClicking(event) {
   // check if money is enough
   if(money < rollMoney) {
     // prompt Notice
-    console.log('No money left.')
+    alert('沒錢還想玩？')
     return;
   }
+
+  // check if roll is done
+  if(!isRollDone) {
+    alert('人生急不得');
+    return;
+  }
+  // switch roll done to false
+  isRollDone = false;
+  // reset roll list
+  buildListDOM();
+  rollListDOM.classList.remove('rolled');
+  cardCover.classList.remove('disable');
+
   // Consume money
   money -= rollMoney;
 
@@ -58,8 +90,11 @@ function processRollClicking(event) {
   // render
   renderMoney(money)
   removeGlow(cardEffect);
-  turnOver(cardCover);
-  roll(rollListDOM);
+  setTimeout(() => {
+    turnOver(cardCover);
+    rollListDOM.classList.add('trans');
+    roll(rollListDOM);
+  },250);
 }
 
 function initMoney() {
