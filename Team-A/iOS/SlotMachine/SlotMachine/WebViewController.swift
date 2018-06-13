@@ -50,9 +50,10 @@ class JavaScriptMethod : NSObject, JavaScriptFuncProtocol {
             let thisDic = ["name":imageName,"color":imageColor,"number":1] as [String : Any]
             
             for i in 0..<imageDic.count {
-                print(imageDic[i]["name"] as! String)
-                print(thisDic["name"])
-                if imageDic[i]["name"] as! String == thisDic["name"] as! String {
+                let name1 = imageDic[i]["name"] as! String
+                let name2 = thisDic["name"] as! String
+                print(name1,name2)
+                if name1 == name2 {
                     print("角色重覆")
                     var number = imageDic[i]["number"] as! Int
                     number += 1
