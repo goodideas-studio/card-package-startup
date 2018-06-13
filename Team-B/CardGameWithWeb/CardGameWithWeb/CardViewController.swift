@@ -14,12 +14,26 @@ class JavaScriptFunc : NSObject, JavaScriptFuncProtocol {
     
     func saveData(_ character: Int, _ background: Int, _ coins: Int) {
         print("OK")
-        
-        
+        print(character)
+        print(background)
+        print(coins)
+        var value = 0
+        switch background {
+        case 0:
+            value = 1
+        case 1:
+            value = 5
+        case 2:
+            value = 4
+        case 3:
+            value = 3
+        default:
+            value = 2
+        }
         
         UserDefaults.standard.setValue(String(coins), forKey: "coins")
         
-        let drawInfo = ["character": String(character), "background": "cardBackground0\(background+1)"]
+        let drawInfo = ["character": String(character), "background": "cardBackground0\(value)"]
 //        print(drawInfo)
         var cardLists : [[String:String]] = UserDefaults.standard.array(forKey: "record") as? [[String : String]] == nil ? [] : UserDefaults.standard.array(forKey: "record") as! [[String : String]]
         
