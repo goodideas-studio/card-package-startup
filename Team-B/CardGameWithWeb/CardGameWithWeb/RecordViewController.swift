@@ -11,7 +11,7 @@ import UIKit
 class RecordViewController: UIViewController {
     
     @IBOutlet weak var recordCollectionView: UICollectionView!
-    let charactorArray = ["6","10","20","24","27","42","46","56","69","90"]
+    let characterArray = ["6","10","20","24","27","42","46","56","69","90"]
     var playRecords = [[String:String]]()
     
     func createImages(name: String) -> [UIImage] {
@@ -32,20 +32,6 @@ class RecordViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .black
         recordCollectionView.backgroundColor = .clear
-        
-        let firstRecord = [["charactor":"\(charactorArray[0])","background":"cardBackground05"],
-                           ["charactor":"\(charactorArray[1])","background":"cardBackground05"],
-                           ["charactor":"\(charactorArray[2])","background":"cardBackground04"],
-                           ["charactor":"\(charactorArray[3])","background":"cardBackground03"],
-                           ["charactor":"\(charactorArray[4])","background":"cardBackground02"],
-                           ["charactor":"\(charactorArray[5])","background":"cardBackground01"],
-                           ["charactor":"\(charactorArray[0])","background":"cardBackground05"],
-                           ["charactor":"\(charactorArray[1])","background":"cardBackground05"],
-                           ["charactor":"\(charactorArray[2])","background":"cardBackground04"],
-                           ["charactor":"\(charactorArray[3])","background":"cardBackground03"],
-                           ["charactor":"\(charactorArray[4])","background":"cardBackground02"],
-                           ["charactor":"\(charactorArray[5])","background":"cardBackground01"]]
-        UserDefaults.standard.set(firstRecord, forKey: "record")
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -82,7 +68,7 @@ extension RecordViewController:UICollectionViewDataSource,UICollectionViewDelega
         guard playRecords.count > 0 else { return cell }
         cell.recordLabel.text = "第 \(indexPath.item + 1) 抽"
         cell.colorView.image = UIImage(named: playRecords[indexPath.item]["background"]!)
-        cell.cardView.image = UIImage(named: playRecords[indexPath.item]["charactor"]!)
+        cell.cardView.image = UIImage(named: playRecords[indexPath.item]["character"]!)
         
         switch playRecords[indexPath.item]["background"] {
         case "cardBackground05":
