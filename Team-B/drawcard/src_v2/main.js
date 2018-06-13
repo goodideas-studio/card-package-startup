@@ -1,5 +1,5 @@
-// var butt = document.getElementById('btn')
-// butt.addEventListener("click",javaScriptCallToSwift.saveData("a","b"))
+var btn = document.getElementById('btn')
+btn.addEventListener("click",draw)
 
 let money= 1000
 
@@ -19,7 +19,7 @@ function calcoin(){
 var a, b, c;
 
 function draw() {
-  let btn = document.getElementById('btn')
+  // let btn = document.getElementById('btn')
   let transitions = document.getElementById('transitions')
   let draw = document.getElementById('draw')
   let character = document.getElementById('character')
@@ -72,7 +72,7 @@ function randomDraw() {
   let transitionsCount = 12
 
   for (let i = 0; i < transitionsCount; i++) {
-    var index = Math.floor(Math.random() * imageNames.length)
+  var index = Math.floor(Math.random() * imageNames.length)
   console.log(index)
     back.push(`url('img/${imageNames[index]}.png') ${i * 60}px 0px no-repeat`)
   }
@@ -110,9 +110,10 @@ function randomDraw() {
   }
   a = index
   b = randomBG
+
 }
 
 function saveData( ) {
   console.log(a,b,c)
- return[ a, b ,c]
+  return[ a, b ,c]
 }
