@@ -8,18 +8,78 @@
 
 import UIKit
 import WebKit
+import JavaScriptCore
+
+@objc protocol JavaScriptFuncProtocol: JSExport {
+    func getMoney() -> Int
+    func getCardInfo(_ imageName:String,_ imageColor:Int)
+    func updateMoney(_ money:Int)
+}
+
+class JavaScriptMethod : NSObject, JavaScriptFuncProtocol {
+    
+    func getMoney() -> Int{
+        
+        print("拿到錢")
+        
+        if UserDefaults.standard.value(forKey: "money") != nil{
+            return UserDefaults.standard.value(forKey: "money") as! Int
+        }
+        
+        UserDefaults.standard.set(500, forKey: "money")
+        return 500
+    }
+    
+    func updateMoney(_ money:Int) {
+        
+        print("更新錢")
+        UserDefaults.standard.set(money, forKey: "money")
+        print(UserDefaults.standard.value(forKey: "money") as! Int)
+    }
+    
+    // 取得卡片資訊
+    func getCardInfo(_ imageName: String,_ imageColor: Int) {
+        
+        if UserDefaults.standard.value(forKey: "imageDic") == nil {
+            let imageDic = [["name":imageName,"color":imageColor,"number":1]]
+            
+            UserDefaults.standard.set(imageDic, forKey: "imageDic")
+        } else {
+            var imageDic = UserDefaults.standard.value(forKey: "imageDic") as! [[String:Any]]
+//            print("有值\(imageDic)")
+            let thisDic = ["name":imageName,"color":imageColor,"number":1] as [String : Any]
+            
+            for i in 0..<imageDic.count {
+                if imageDic[i]["name"] as! String == thisDic["name"] as! String {
+                    var number = imageDic[i]["number"] as! Int
+                    number += 1
+                    imageDic[i]["number"] = number
+                } else {
+                    imageDic.append(thisDic)
+                    UserDefaults.standard.set(imageDic, forKey: "imageDic")
+                }
+            }
+        }
+        print(UserDefaults.standard.value(forKey: "imageDic") as! [[String:Any]] )
+
+    }
+    
+}
 
 class WebViewController: UIViewController {
 
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let url = URL(string: "https://www.google.com.tw/")
-        let request = URLRequest(url: url!)
         
-        webView.load(request)
+
+        let url = Bundle.main.url(forResource: "index", withExtension: ".html")
+        let request = URLRequest(url: url!)
+        webView.loadRequest(request)
+        
+        let jsContext = self.webView.value(forKeyPath: "documentView.webView.mainFrame.javaScriptContext") as? JSContext
+        jsContext?.setObject(JavaScriptMethod(), forKeyedSubscript: "javaScriptCallToSwift" as (NSCopying & NSObjectProtocol)!)
         
     }
 
@@ -27,6 +87,10 @@ class WebViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // 開始遊戲
+ 
+    
     
 
     /*

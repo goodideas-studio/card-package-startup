@@ -12,10 +12,10 @@ import Foundation
 struct CardModel {
     
     let imageName:String
-    let imageColor:String
+    let imageColor:Int
     var number:Int
     
-    init(imageName:String,imageColor:String,number:Int) {
+    init(imageName:String,imageColor:Int,number:Int) {
         self.imageName = imageName
         self.imageColor = imageColor
         self.number = number

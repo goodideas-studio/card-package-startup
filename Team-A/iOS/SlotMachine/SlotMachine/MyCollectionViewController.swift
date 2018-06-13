@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import JavaScriptCore
 
 class MyCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var myCollectionArray = [CardModel]()
+    var myCollectionArray = [[String:Any]]()
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     @IBOutlet weak var myCollectionLayout: UICollectionViewFlowLayout!
@@ -30,38 +31,31 @@ class MyCollectionViewController: UIViewController, UICollectionViewDataSource, 
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if let collectionArray = UserDefaults.standard.value(forKey: "imageDic") {
+            myCollectionArray = collectionArray as! [[String:Any]]
+            print("接收到\(myCollectionArray)")
+        }
+        
+        myCollectionView.reloadData()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return myCollectionArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let myCollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCollectionCell", for: indexPath) as! MyCollectionViewCell
         
-        myCollectionCell.backgroundColor = UIColor.blue
+        myCollectionCell.characterImage.image = UIImage(named: "\(myCollectionArray[indexPath.row]["name"]!)")
+        myCollectionCell.maskImage.image = UIImage(named: "C\(myCollectionArray[indexPath.row]["color"]!)")
+        
+        
         myCollectionCell.characterInfo.text = "測試測試\(indexPath.row)"
         
         return myCollectionCell
         
-    }
-    
-    
-    // 接收卡片資訊
-    func receiveCard(imageName:String,imageColor:String,number:Int) {
-        
-        let card = CardModel(imageName: imageName, imageColor: imageColor, number: 1)
-        
-        for i in 0..<myCollectionArray.count {
-            
-            // 判斷是否擁有該卡片，若有則增加數量，若沒有則加入 Array。
-            if myCollectionArray[i].imageName == card.imageName {
-                myCollectionArray[i].number += 1
-            } else {
-                myCollectionArray.append(card)
-            }
-        }
-        
-        myCollectionView.reloadData()
     }
     
     

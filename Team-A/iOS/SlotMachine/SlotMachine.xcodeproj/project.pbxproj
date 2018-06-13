@@ -15,6 +15,10 @@
 		5E0AD76220D0BE32006C9987 /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AD76120D0BE32006C9987 /* MyCollectionViewController.swift */; };
 		5E0AD76420D0BF70006C9987 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AD76320D0BF70006C9987 /* CardModel.swift */; };
 		5E0AD76620D0C167006C9987 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AD76520D0C167006C9987 /* MyCollectionViewCell.swift */; };
+		5E0AD7CF20D0FA9B006C9987 /* imgs in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7CB20D0FA9A006C9987 /* imgs */; };
+		5E0AD7D020D0FA9B006C9987 /* css in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7CC20D0FA9A006C9987 /* css */; };
+		5E0AD7D220D0FA9B006C9987 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7CE20D0FA9A006C9987 /* js */; };
+		5E0AD7D420D0FDB8006C9987 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD7D320D0FDB8006C9987 /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		5E0AD76120D0BE32006C9987 /* MyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
 		5E0AD76320D0BF70006C9987 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		5E0AD76520D0C167006C9987 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		5E0AD7CB20D0FA9A006C9987 /* imgs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = imgs; sourceTree = "<group>"; };
+		5E0AD7CC20D0FA9A006C9987 /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
+		5E0AD7CE20D0FA9A006C9987 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
+		5E0AD7D320D0FDB8006C9987 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = "../../../../card-package-startup/Team-A/web/index.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +69,18 @@
 			isa = PBXGroup;
 			children = (
 				5E0AD74D20D0BB6B006C9987 /* AppDelegate.swift */,
+				5E0AD76320D0BF70006C9987 /* CardModel.swift */,
 				5E0AD75F20D0BD1F006C9987 /* WebViewController.swift */,
-				5E0AD75120D0BB6B006C9987 /* Main.storyboard */,
-				5E0AD76520D0C167006C9987 /* MyCollectionViewCell.swift */,
 				5E0AD76120D0BE32006C9987 /* MyCollectionViewController.swift */,
+				5E0AD76520D0C167006C9987 /* MyCollectionViewCell.swift */,
+				5E0AD75120D0BB6B006C9987 /* Main.storyboard */,
 				5E0AD75420D0BB70006C9987 /* Assets.xcassets */,
+				5E0AD7CC20D0FA9A006C9987 /* css */,
+				5E0AD7CB20D0FA9A006C9987 /* imgs */,
+				5E0AD7D320D0FDB8006C9987 /* index.html */,
+				5E0AD7CE20D0FA9A006C9987 /* js */,
 				5E0AD75620D0BB70006C9987 /* LaunchScreen.storyboard */,
 				5E0AD75920D0BB70006C9987 /* Info.plist */,
-				5E0AD76320D0BF70006C9987 /* CardModel.swift */,
 			);
 			path = SlotMachine;
 			sourceTree = "<group>";
@@ -131,7 +143,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E0AD7D020D0FA9B006C9987 /* css in Resources */,
+				5E0AD7CF20D0FA9B006C9987 /* imgs in Resources */,
 				5E0AD75820D0BB70006C9987 /* LaunchScreen.storyboard in Resources */,
+				5E0AD7D220D0FA9B006C9987 /* js in Resources */,
+				5E0AD7D420D0FDB8006C9987 /* index.html in Resources */,
 				5E0AD75520D0BB70006C9987 /* Assets.xcassets in Resources */,
 				5E0AD75320D0BB6B006C9987 /* Main.storyboard in Resources */,
 			);

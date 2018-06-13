@@ -37,11 +37,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="146" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4sU-i3-qMS">
+                                                    <rect key="frame" x="8" y="8" width="130" height="120"/>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hEO-jK-BjY">
-                                                    <rect key="frame" x="8" y="8" width="130" height="100"/>
+                                                    <rect key="frame" x="8" y="8" width="130" height="120"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJY-LG-OBp">
-                                                    <rect key="frame" x="8" y="108" width="130" height="34"/>
+                                                    <rect key="frame" x="8" y="128" width="130" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -51,16 +54,21 @@
                                         <constraints>
                                             <constraint firstAttribute="trailingMargin" secondItem="hEO-jK-BjY" secondAttribute="trailing" id="0uk-3E-DSm"/>
                                             <constraint firstItem="FJY-LG-OBp" firstAttribute="leading" secondItem="HiA-ZV-5I1" secondAttribute="leadingMargin" id="AD1-jy-juL"/>
-                                            <constraint firstItem="hEO-jK-BjY" firstAttribute="height" secondItem="HiA-ZV-5I1" secondAttribute="height" multiplier="2:3" id="aI5-4E-lQI"/>
+                                            <constraint firstItem="4sU-i3-qMS" firstAttribute="leading" secondItem="HiA-ZV-5I1" secondAttribute="leadingMargin" id="UvV-MU-5cG"/>
+                                            <constraint firstItem="hEO-jK-BjY" firstAttribute="height" secondItem="HiA-ZV-5I1" secondAttribute="height" multiplier="4:5" id="aI5-4E-lQI"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="FJY-LG-OBp" secondAttribute="trailing" id="bCj-q8-TxF"/>
                                             <constraint firstItem="FJY-LG-OBp" firstAttribute="top" secondItem="hEO-jK-BjY" secondAttribute="bottom" id="bR7-zo-212"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="4sU-i3-qMS" secondAttribute="trailing" id="bw1-HZ-uXA"/>
                                             <constraint firstItem="hEO-jK-BjY" firstAttribute="leading" secondItem="HiA-ZV-5I1" secondAttribute="leadingMargin" id="bzq-K0-VeF"/>
+                                            <constraint firstItem="4sU-i3-qMS" firstAttribute="height" secondItem="hEO-jK-BjY" secondAttribute="height" id="cPC-WF-4oc"/>
+                                            <constraint firstItem="4sU-i3-qMS" firstAttribute="top" secondItem="HiA-ZV-5I1" secondAttribute="topMargin" id="gkB-q8-3nf"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="FJY-LG-OBp" secondAttribute="bottom" id="jB5-Va-AzO"/>
                                             <constraint firstItem="hEO-jK-BjY" firstAttribute="top" secondItem="HiA-ZV-5I1" secondAttribute="topMargin" id="kHQ-Ng-6WT"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="characterImage" destination="hEO-jK-BjY" id="7fU-1G-bkX"/>
                                             <outlet property="characterInfo" destination="FJY-LG-OBp" id="HqA-if-MW6"/>
+                                            <outlet property="maskImage" destination="4sU-i3-qMS" id="hEd-cF-1Ru"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -88,35 +96,31 @@
         <!--WebView-->
         <scene sceneID="xxi-kv-xiP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dya-Md-SOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cwO-mf-G9L" customClass="WebViewController" customModule="SlotMachine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uBV-Zg-M5k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMi-zu-BMC">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRc-Cn-Er7">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Bch-BG-PXo" firstAttribute="bottom" secondItem="kMi-zu-BMC" secondAttribute="bottom" id="LJJ-3u-VEQ"/>
-                            <constraint firstItem="kMi-zu-BMC" firstAttribute="top" secondItem="Bch-BG-PXo" secondAttribute="top" id="Npe-QJ-gyH"/>
-                            <constraint firstItem="kMi-zu-BMC" firstAttribute="leading" secondItem="Bch-BG-PXo" secondAttribute="leading" id="r1X-2n-kSu"/>
-                            <constraint firstItem="Bch-BG-PXo" firstAttribute="trailing" secondItem="kMi-zu-BMC" secondAttribute="trailing" id="vjE-Bc-7cU"/>
+                            <constraint firstItem="sRc-Cn-Er7" firstAttribute="top" secondItem="Bch-BG-PXo" secondAttribute="top" id="Uun-pP-FQx"/>
+                            <constraint firstItem="Bch-BG-PXo" firstAttribute="bottom" secondItem="sRc-Cn-Er7" secondAttribute="bottom" id="cr2-59-BUp"/>
+                            <constraint firstItem="Bch-BG-PXo" firstAttribute="trailing" secondItem="sRc-Cn-Er7" secondAttribute="trailing" id="lAo-uf-hqV"/>
+                            <constraint firstItem="sRc-Cn-Er7" firstAttribute="leading" secondItem="Bch-BG-PXo" secondAttribute="leading" id="wJ5-yK-nfe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bch-BG-PXo"/>
                     </view>
                     <navigationItem key="navigationItem" title="WebView" id="Bj0-Nk-if4"/>
                     <connections>
-                        <outlet property="webView" destination="kMi-zu-BMC" id="NnF-bF-Q7p"/>
+                        <outlet property="webView" destination="sRc-Cn-Er7" id="VhF-Ds-XOU"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dya-Md-SOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1021.6" y="85.907046476761622"/>
         </scene>
