@@ -14,7 +14,7 @@ iOS / Web Camp
 
 - Team A: Andy / Jeremy / Iris
 - Team B: 菘駿 / Morris / Mickey
-- Team C: Andy / Jason / Ethan
+- Team C: Arel / Jason / Ethan
 
 ## 任務描述
 
